@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './SalonsPage.css';
-import App from './../../App';
+import PriceSorter from './../priceSorter/PriceSorter';
 
 import { Link, Router, Route } from 'react-router-dom';
 
@@ -29,45 +29,42 @@ class SalonsPage extends React.Component {
 
       <div>
         <header>
-          <div>
+          <div class='block'>
             <img src='img/tilde-left-gold.png' alt='' />
             <h2>Hår</h2>
             <img src='img/controls.png' alt='' />
           </div>
-          <div>
-            {/* <app-price-sorter (newPriceRange)=sortList($event)></app-price-sorter> */}
+          <div class='block'>
+            <PriceSorter/>
           </div>
         </header>
         <section class='salons'>
           <ul>
-            <li>
-              <a>
-                <article>
-                  <div class='left'>
-                    <p> 12.00 </p>
-                  </div>
-                  <div class='center'>
-                    <h3>Hårgänget</h3> <span class='rating'>{/* <pm-star [rating]=salon?.rating></pm-star> */} (32)</span>
-                    <p> Främlingsvägen </p>
-                  </div>
-                  <div class='right'>
-                    <div>
-                      <p> 100 kr </p>
-                      <h5>30 min</h5> </div>
-                  </div>
-                  <div class='forward-button'> <img src='img/tilde-right-gold.png' alt='' /> </div>
-                </article>
-              </a>
-            </li>
+            {this.state.salons.map(salon => <li>
+                                              <a>
+                                                <article>
+                                                  <div class='left'>
+                                                    <p>
+                                                      {salon.opens} </p>
+                                                  </div>
+                                                  <div class='center'>
+                                                    <h3>{salon.name}</h3> <span class='rating'>{/* <pm-star [rating]=salon?.rating></pm-star> */} (32)</span>
+                                                    <p>
+                                                      {salon.address} </p>
+                                                  </div>
+                                                  <div class='right'>
+                                                    <div>
+                                                      <p>
+                                                        {salon.price} kr </p>
+                                                      <h5>{salon.duration} min</h5> </div>
+                                                  </div>
+                                                  <div class='forward-button'> <img src='img/tilde-right-gold.png' alt='' /> </div>
+                                                </article>
+                                              </a>
+                                            </li>)}
           </ul>
-          {/* <app-error-message *ngIf="errorMessage"></app-error-message> */}
         </section>
       </div>
-      // <ul>
-      //   {this.state.salons.map(salon => <li>
-      //                                     {salon.name}
-      //                                   </li>)}
-      // </ul>
 
     );
   }
