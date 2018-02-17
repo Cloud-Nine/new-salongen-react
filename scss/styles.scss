@@ -1,0 +1,54 @@
+@charset "UTF-8";
+@import './exports';
+@import './normalize';
+@import './animate';
+@font-face {
+    font-family: "Font Bureau";
+    src: url("/assets/fonts/FontBureau.otf") format("otf")
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: $base-font-size;
+    background-color: $bright-background !important;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.serif {
+    font-family: 'Font Bureau';
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif; // color: $bright-heading-text;
+    font-weight: 400;
+}
+
+h5 {
+    font-weight: 200;
+    color: $grey-light-text;
+    display: inline-block;
+}
+
+.active {
+    border-bottom: 1px solid $gold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $dark-heading-text;
+}

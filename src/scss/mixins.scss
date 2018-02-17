@@ -1,0 +1,18 @@
+@mixin cx {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin cy {
+    position: absolute;
+    top: 50%;
+    transform: translate(-0%, -50%);
+}
+
+@mixin cxy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
