@@ -19,7 +19,7 @@ class StarRating extends React.Component {
 
   render () {
     return (
-      <span className='stars'><img src={this.state.stars[0].url}/> <img src={this.state.stars[1].url}/> <img src={this.state.stars[2].url}/> <img src={this.state.stars[3].url}/> <img src={this.state.stars[4].url}/></span>
+      <span className='stars'><img src={this.state.stars[0].url} alt='star'/> <img src={this.state.stars[1].url} alt='star'/> <img src={this.state.stars[2].url} alt='star'/> <img src={this.state.stars[3].url} alt='star'/> <img src={this.state.stars[4].url} alt='star'/></span>
     );
   }
 }

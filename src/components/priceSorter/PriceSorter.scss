@@ -1,3 +1,4 @@
+@import './../../scss/exports.scss';
 :host {
     width: 100%;
     padding: 0 5px 0 5px;
@@ -8,9 +9,33 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    option {
-        cursor: pointer;
+    height: 100%;
+    border: none;
+    position: relative;
+    border-bottom: 1px solid $gold;
+    div {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        line-height: 257%;
+        border-bottom: 1px solid $gold; // background-color: red;
+        z-index: 1;
+        padding: 0.1875rem;
+
+        li{
+           // border-bottom: 1px solid $gold;
+        }
     }
+}
+
+.priceList {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: tomato
 }
 
 select {
@@ -23,6 +48,18 @@ select {
     height: 200px;
 }
 
-.upsideDown {
+.up {
     transform: rotate(0.5turn);
+}
+
+.down {
+    transform: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
 }
