@@ -1,7 +1,12 @@
 @import './scss/exports.scss';
 @font-face {
     font-family: "Font Bureau";
-    src: url("/assets/fonts/FontBureau.otf") format("otf")
+    src: url("/fonts/FontBureau.otf") format("otf")
+}
+
+@font-face {
+    font-family: "Helvetic Neue Light";
+    src: url("/fonts/HelveticaNeueLight.ttf") format("ttf")
 }
 
 *,
@@ -17,22 +22,44 @@ body {
     overflow-x: hidden;
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Helvetic Neue Light',sans-serif;
+    // font-family: Arial, Helvetica, sans-serif;
 }
 
 .serif {
     font-family: 'Font Bureau';
 }
 
-h3 {
-    font-family: Arial, Helvetica, sans-serif; // color: $bright-heading-text;
-    font-weight: 400;
+.small-text {
+    font-size: 0.6875rem;
 }
 
+.grey-text {
+    color:$grey-light-text;
+}
+
+h3,h4,h5{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif; // color: $bright-heading-text;
+    font-weight: 300;
+    margin-bottom: 0.5rem
+}
+
+h4 {
+    font-weight: 200;
+    color: $grey-light-text;
+    display: inline-block;
+    margin-bottom: 0.5rem
+}
 h5 {
     font-weight: 200;
     color: $grey-light-text;
     display: inline-block;
+    margin-bottom: 0.5rem
 }
 
 .active {

@@ -3,7 +3,7 @@ import axios from 'axios';
 import './SalonsPage.css';
 import PriceSorter from './../priceSorter/PriceSorter';
 import StarRating from './../starRating/StarRating';
-//import {Link, Router, Route} from 'react-router-dom';
+import {Link, Route} from 'react-router-dom';
 
 class SalonsPage extends React.Component {
 
@@ -42,11 +42,11 @@ class SalonsPage extends React.Component {
   render() {
     return (
 
-      <div>
+      <div className="salonsPage">
         <header>
           <div className='block'>
             <img src='img/tilde-left-gold.png' alt='tilde-left-gold'/>
-            <h2>Hår</h2>
+            <h2 className="serif">Hår</h2>
             <img src='img/controls.png' alt='controls'/>
           </div>
           <div className='block'>
@@ -57,7 +57,7 @@ class SalonsPage extends React.Component {
           <ul>
             {this.state.filteredSalons
               .map(salon => <li className="" key={salon.name}>
-                <a>
+                <Link to={`/salong/${salon.name}`}>
                   <article>
                     <div className='left'>
                       <p>
@@ -65,13 +65,14 @@ class SalonsPage extends React.Component {
                       </p>
                     </div>
                     <div className='center'>
-                      <h3>{salon.name}</h3>
+                      <h3 className="serif">{salon.name}</h3>
+                      <div className="rating">
                       <StarRating rating={salon.rating}/>
-                      <span className='rating'>
-                        ({salon.nrOfRatings})</span>
-                      <p>
+                      <span><p className='grey-text small-text'>({salon.nrOfRatings})</p></span>
+                      </div> 
+                      <h4>
                         {salon.address}
-                      </p>
+                      </h4>
                     </div>
                     <div className='right'>
                       <div>
@@ -85,7 +86,7 @@ class SalonsPage extends React.Component {
                       <img src='img/tilde-right-gold.png' alt='tilde-right-gold'/>
                     </div>
                   </article>
-                </a>
+                </Link>
               </li>)}
           </ul>
         </section>

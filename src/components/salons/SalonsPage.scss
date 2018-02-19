@@ -1,97 +1,105 @@
 @import './../../scss/exports.scss';
-ul,
-{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-p {
-    font-weight: 100;
-}
-
-a {
-    text-decoration: none;
-    color: initial;
-}
-
-.salons {
-    @include sm {
-        width: 70%;
-        margin: 0 auto;
+.salonsPage {
+    ul,
+    {
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
-}
-
-header {
-    .block {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid $gold;
-        &:nth-child(1) {
-            padding: 0 5px 0 5px;
-        }
-        &:nth-child(2) {
-            height: 60px;
-        }
-        h2 {
-            font-weight: 100;
+    p {
+        font-weight: 200;
+    }
+    a {
+        text-decoration: none;
+        color: initial;
+    }
+    .salons {
+        @include sm {
+            width: 70%;
+            margin: 0 auto;
         }
     }
-}
-
-article {
-    display: table;
-    width: 100%;
-    border-bottom: 1px solid $bright-border;
-    cursor: pointer;
-    &:hover {
-        background: lighten($gold, 50%);
-    }
-    &:active {
-        background: lighten($gold, 50%);
-    }
-    div {
-        display: table-cell;
-        height: 100%;
-    }
-    .left {
-        // background-color: red;
-        width: 18%;
-        padding-left: 0.25rem;
-    }
-    .center {
-        // background-color: blue;
-        width: 57.5%;
-    }
-    .right {
-        // background-color: lightgreen;
-        width: 20%;
-        div {
+    header {
+        .block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $gold;
             &:nth-child(1) {
-                width: 100%;
-                padding-right: 0.75rem;
+                padding: 0 1.125rem;
             }
-            h5 {
-                margin-top: 0;
-                margin-left: 6px;
+            &:nth-child(2) {
+                height: 60px;
             }
+            h2 {
+                font-weight: 100;
+            }
+        }
+    }
+    article {
+        display: table;
+        height: 105px;
+        width: 100%;
+        border-bottom: 1px solid $bright-border;
+        padding: 0 1.125rem 0 1.125rem;
+        cursor: pointer;
+        &:hover {
+            background: lighten($gold, 50%);
+        }
+        &:active {
+            background: lighten($gold, 50%);
+        }
+        div {
+            display: table-cell;
+        }
+        .left {
+            width: 18%; // background-color: hsla(108, 84%, 50%, 0.2);
+            h4 {
+                color: $grey-medium-text;
+                font-size: 0.94rem;
+            }
+        }
+        .center {
+            //  background-color: hsla(317, 84%, 50%, 0.2);
+            width: 57.5%; // height: 92px;
+            h4 {
+                color: $grey-medium-text;
+            }
+        }
+        .right {
+            // background-color: hsla(200, 84%, 50%, 0.2);
+            width: 20%; //height: 92px;
+            div {
+                &:nth-child(1) {
+                    width: 100%; //  padding-right: 0.75rem;
+                }
+                h5 {
+                    margin-top: 0;
+                    margin-left: 6px;
+                    color: $grey-medium-text;
+                }
+                p {
+                    margin-bottom: 0.5rem;
+                    color: $dark-heading-text;
+                }
+            }
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            max-width: 45%;
             p {
-                margin-bottom: 0.5rem;
+                color: $grey-light-text;
+                display: inline;
             }
         }
-    }
-    .rating {
-        //   background-color: green;
-        p {
-            color: $grey-light-text;
-        }
-    }
-    .forward-button {
-        position: relative;
-        height: 100%;
-        img {
-            @include cy;
+        .forward-button {
+            position: relative;
+            height: 100%;
+            img {
+                @include cy;
+                right: 0;
+            }
         }
     }
 }

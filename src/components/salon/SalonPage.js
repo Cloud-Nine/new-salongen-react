@@ -1,20 +1,19 @@
 import React from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router'
 import './SalonPage.css';
 
-class SalonsPage extends React.Component {
+class SalonPage extends React.Component {
 
   constructor (props) {
     super(props);
 
     this.state = {
-      salons: []
+      salon: props.match.params.name
     };
   }
 
   componentDidMount () {
-    axios.get(`http://localhost:3456/salons`)
+    axios.get(`http://localhost:3456/salons/${this.state.salon}`)
       .then(res => {
         const salons = res.data.salons;
         this.setState({ salons});
@@ -23,14 +22,12 @@ class SalonsPage extends React.Component {
 
   render () {
     return (
-      <ul>
-        {this.state.salons.map(salon => <li key={salon.name}>
-                                          {salon.name}
-                                        </li>)}
-      </ul>
+   
+      
+      <h1>heelo</h1>
 
     );
   }
 }
 
-export default SalonsPage;
+export default SalonPage;

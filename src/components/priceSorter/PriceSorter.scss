@@ -12,7 +12,7 @@
     height: 100%;
     border: none;
     position: relative;
-    border-bottom: 1px solid $gold;
+    padding: 0 1.125rem;
     div {
         position: absolute;
         top: 60px;
@@ -26,6 +26,7 @@
 
         li{
            // border-bottom: 1px solid $gold;
+           font-weight: 200;
         }
     }
 }
@@ -57,9 +58,18 @@ select {
 }
 
 .hidden {
-    display: none;
+    display: none
+}
+
+.collapsed {
+    height: 0;
+}
+
+.expanded {
+    height: auto;
 }
 
 .show {
-    display: block;
+  ////  display: block;
+  //  height: auto;
 }

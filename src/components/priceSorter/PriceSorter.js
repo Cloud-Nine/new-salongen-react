@@ -9,6 +9,7 @@ class PriceSorter extends React.Component {
     this.state = {
       showHideSorter: 'hidden',
       upOrDown: 'down',
+      collapsedOrexpanded: 'collapsed',
       currentPrice: `Pris 250-500 kr`
     };
   }
@@ -16,8 +17,10 @@ class PriceSorter extends React.Component {
   toggleDropdown () {
     var hideOrShow = (this.state.showHideSorter === 'hidden') ? 'show' : 'hidden';
     var upOrDown = (this.state.upOrDown === 'down') ? 'up' : 'down';
+    var collapsedOrexpanded = (this.state.collapsedOrexpandedv === 'expanded') ? 'collapsed' : 'expanded';
     this.setState({'showHideSorter': hideOrShow});
     this.setState({'upOrDown': upOrDown});
+    this.setState({'collapsedOrexpanded': collapsedOrexpanded});
   }
 
   selectPriceRange (event) {
@@ -44,7 +47,7 @@ class PriceSorter extends React.Component {
       <div onClick={this.toggleDropdown.bind(this)} className='sorter'>
         <p>{this.state.currentPrice}</p>
         <img className={this.state.upOrDown} src='./img/tilde-down-gold.png' alt='' />
-        <div className={this.state.showHideSorter}>
+        <div className={`animated slideInDown ${this.state.showHideSorter}`}>
           <ul>
             <li onClick={this.selectPriceRange.bind(this)} data-all='100'>
               Alla priser
