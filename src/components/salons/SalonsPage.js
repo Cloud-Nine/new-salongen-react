@@ -56,7 +56,7 @@ class SalonsPage extends React.Component {
         <section className='salons'>
           <ul>
             {this.state.filteredSalons
-              .map(salon => <li className="" key={salon.name}>
+              .map(salon => <li  key={salon.name}>
                 <Link to={`/salong/${salon.name}`}>
                   <article>
                     <div className='left'>

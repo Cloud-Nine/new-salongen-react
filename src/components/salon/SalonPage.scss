@@ -1,89 +1,107 @@
-// @import './../../scss/exports.scss';
-// ul,
-// {
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-// }
+@import './../../scss/exports.scss';
+.salonPage {
+    background-color: $middle-background;
+  
+    header {
+        position: relative;
+        height: 38vh;
+        .background {
+            width: 100%;
+            position: relative;
+            overflow-y: hidden;
+            max-height: 38vh;
+        }
+        a {
+            position: absolute;
+            top: 8%;
+            left:  4.26666666%;
+        }
+        h2 {
+            color: $bright-heading-text;
+            font-weight: 200;
+            margin:0 0 0 0;
+        }
+        div {
+            position: absolute;
+            height: 27.87610619%;
+            width: 100%;
+            bottom: 0;
+            padding: 0 0 4% 2%;
+            p {
+                display: inline-block;
+                color: $bright-heading-text;
+                font-size: 0.8125rem;
+                font-weight: 200;
+            }
 
-// p {
-//     font-weight: 100;
-// }
+            .stars{
+                width: 29%;
+            }
+        }
+        .heart {
+            position: absolute;
+            top: 8%;
+            right: 4.26666666%;
+        }
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        align-content: space-around;
+        background-color: $bright-background;
+        height: 7.61589404vh;
+        div {
+            width: 50%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            
+        }
+    }
+    section {
 
-// a {
-//     text-decoration: none;
-//     color: initial;
-// }
+        @include md{
+            width:70%;
+            margin: 0 auto;
+            background-color: $middle-background;
 
-// header {
-//     div {
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//         border-bottom: 1px solid $gold;
-//         &:nth-child(1) {
-//             padding: 0 5px 0 5px;
-//         }
-//         &:nth-child(2) {
-//             border: none;
-//         }
-//         h2 {
-//             font-weight: 100;
-//         }
-//     }
-// }
+        }
 
-// article {
-//     display: table;
-//     width: 100%;
-//     border-bottom: 1px solid $bright-border;
-//     cursor: pointer;
-//     &:hover {
-//         background: lighten($gold, 50%);
-//     }
-//     &:active {
-//         background: lighten($gold, 50%);
-//     }
-//     div {
-//         display: table-cell;
-//         height: 100%;
-//     }
-//     .left {
-//         // background-color: red;
-//         width: 18%;
-//         padding-left: 0.25rem;
-//     }
-//     .center {
-//         // background-color: blue;
-//         width: 57.5%;
-//     }
-//     .right {
-//         // background-color: lightgreen;
-//         width: 20%;
-//         div {
-//             &:nth-child(1) {
-//                 width: 100%;
-//                 padding-right: 0.75rem;
-//             }
-//             h5 {
-//                 margin-top: 0;
-//                 margin-left: 6px;
-//             }
-//             p {
-//                 margin-bottom: 0.5rem;
-//             }
-//         }
-//     }
-//     .rating {
-//            display: flex;
-//            width: 82px;
+      .inner-wrapper{
+        padding-right: 4.266666667%;
+        padding-left: 4.266666667%;
+        background-color: $middle-background;
+
+      }
+        margin-top: 3.298350825vh;
+        ul {
+            color:$dark-heading-text;
+            font-weight: 200;
+            font-size:0.9375rem;
+            li {
+                margin-bottom: 1px;
+                padding-top: 1.79910045vh;
+                padding-bottom: 1.79910045vh;
+                background-color: $bright-background;
+
+                .tilde-down{
+                        margin-left: 2.814814815%;
+                    
+                }
+            }
+            img {
+                padding-right: 3.733333333%;
+            }
+        }
+
+        .description{
+            background-color: $middle-background;
+            p {
+                line-height: 175%;
+                font-weight: 200;
+                font-size:0.9375rem;
+            }
+        }
+        }
         
-//     }
-//     .forward-button {
-//         position: relative;
-//         height: 100%;
-//         img {
-//             @include cy;
-//         }
-//     }
-// }
+}
