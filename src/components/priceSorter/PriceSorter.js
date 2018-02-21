@@ -10,7 +10,7 @@ class PriceSorter extends React.Component {
       showHideSorter: 'hidden',
       upOrDown: 'down',
       collapsedOrexpanded: 'collapsed',
-      currentPrice: `Pris 250-500 kr`
+      currentPrice: `Pris 250 - 500 kr`
     };
   }
 
@@ -30,14 +30,12 @@ class PriceSorter extends React.Component {
         all: true
       };
       this.setState({'currentPrice': `Alla priser`});
-
     }else {
       values = {
         min: event.target.dataset.min,
         max: event.target.dataset.max
       };
-      this.setState({'currentPrice': `Pris ${values.min}-${values.max} kr`});
-
+      this.setState({'currentPrice': `Pris ${values.min} - ${values.max} kr`});
     }
     this.props.getPriceFromChild(values);
   }
@@ -45,7 +43,9 @@ class PriceSorter extends React.Component {
   render () {
     return (
       <div onClick={this.toggleDropdown.bind(this)} className='sorter'>
-        <p>{this.state.currentPrice}</p>
+        <p>
+          {this.state.currentPrice}
+        </p>
         <img className={this.state.upOrDown} src='./img/tilde-down-gold.png' alt='' />
         <div className={` ${this.state.showHideSorter}`}>
           <ul>
@@ -53,16 +53,16 @@ class PriceSorter extends React.Component {
               Alla priser
             </li>
             <li onClick={this.selectPriceRange.bind(this)} data-min='100' data-max='250'>
-              100-250 kr
+              100 - 250 kr
             </li>
             <li onClick={this.selectPriceRange.bind(this)} data-min='250' data-max='400'>
-              250-400 kr
+              250 - 400 kr
             </li>
             <li onClick={this.selectPriceRange.bind(this)} data-min='400' data-max='600'>
-              400-600 kr
+              400 - 600 kr
             </li>
             <li onClick={this.selectPriceRange.bind(this)} data-min='600' data-max='800'>
-              600-800 kr
+              600 - 800 kr
             </li>
           </ul>
         </div>

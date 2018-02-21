@@ -1,10 +1,10 @@
 @import './../../scss/exports.scss';
 .salonPage {
     background-color: $middle-background;
-  
     header {
         position: relative;
         height: 38vh;
+        -webkit-font-smoothing: antialiased;
         .background {
             width: 100%;
             position: relative;
@@ -14,28 +14,33 @@
         a {
             position: absolute;
             top: 8%;
-            left:  4.26666666%;
+            left: 4.26666666%;
         }
         h2 {
             color: $bright-heading-text;
             font-weight: 200;
-            margin:0 0 0 0;
+            margin: 0 0 0 0;
         }
         div {
             position: absolute;
             height: 27.87610619%;
             width: 100%;
             bottom: 0;
-            padding: 0 0 4% 2%;
+            padding: 0 0 19% 2%;
+            h2 {
+                margin-bottom: 1.732283465%;
+            }
             p {
                 display: inline-block;
                 color: $bright-heading-text;
                 font-size: 0.8125rem;
                 font-weight: 200;
+                margin: 0;
             }
-
-            .stars{
-                width: 29%;
+            .stars {
+                width: 22%;
+                display: inline-flex;
+                justify-content: space-between;
             }
         }
         .heart {
@@ -55,53 +60,44 @@
             align-items: center;
             display: flex;
             justify-content: center;
-            
         }
     }
     section {
-
-        @include md{
-            width:70%;
+        @include md {
+            width: 70%;
             margin: 0 auto;
             background-color: $middle-background;
-
         }
-
-      .inner-wrapper{
-        padding-right: 4.266666667%;
-        padding-left: 4.266666667%;
-        background-color: $middle-background;
-
-      }
+        .inner-wrapper {
+            padding-right: 4.266666667%;
+            padding-left: 4.266666667%;
+            background-color: $middle-background;
+        }
         margin-top: 3.298350825vh;
         ul {
-            color:$dark-heading-text;
+            color: $dark-heading-text;
             font-weight: 200;
-            font-size:0.9375rem;
+            font-size: 0.9375rem;
             li {
                 margin-bottom: 1px;
                 padding-top: 1.79910045vh;
                 padding-bottom: 1.79910045vh;
                 background-color: $bright-background;
-
-                .tilde-down{
-                        margin-left: 2.814814815%;
-                    
+                .tilde-down {
+                    margin-left: 2.814814815%;
                 }
             }
             img {
                 padding-right: 3.733333333%;
             }
         }
-
-        .description{
+        .description {
             background-color: $middle-background;
             p {
                 line-height: 175%;
                 font-weight: 200;
-                font-size:0.9375rem;
+                font-size: 0.9375rem;
             }
         }
-        }
-        
+    }
 }

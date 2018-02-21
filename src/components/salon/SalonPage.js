@@ -37,7 +37,7 @@ class SalonPage extends React.Component {
           <div>
             <h2 className='serif'>{this.state.salon.name}</h2>
             {this.state.salon.rating &&
-             <span><StarRating test='' rating={this.state.salon.rating}/> <p> ({this.state.salon.nrOfRatings}) </p></span>}
+             <span><StarRating rating={this.state.salon.rating}/> <p> ({this.state.salon.nrOfRatings}) </p></span>}
           </div>
           <img className='heart' src='/img/heart.png' alt='heart' />
         </header>
@@ -45,7 +45,7 @@ class SalonPage extends React.Component {
           <div className='active'>
             <a>Info</a>
           </div>
-          <div className='active'>
+          <div>
             <a>Schema</a>
           </div>
         </nav>
