@@ -3,7 +3,7 @@ import axios from 'axios';
 import './SalonsPage.css';
 import PriceSorter from './../priceSorter/PriceSorter';
 import StarRating from './../starRating/StarRating';
-import {Link, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 class SalonsPage extends React.Component {
 
@@ -30,6 +30,7 @@ class SalonsPage extends React.Component {
 
   componentDidMount() {
     axios
+      // .get(`http://esfb.nu/salonapi/salons`)
       .get(`http://localhost:3456/salons`)
       .then(res => {
         const salons = res.data.salons;
@@ -56,8 +57,8 @@ class SalonsPage extends React.Component {
         <section className='salons'>
           <ul>
             {this.state.filteredSalons
-              .map(salon => <li  key={salon.name}>
-                <Link to={`/salong/${salon.name}`}>
+              .map(salon => <li  key={salon.id}>
+                <Link to={`/salong/${salon.name}/${salon.id}`}>
                   <article>
                     <div className='left'>
                       <p>
