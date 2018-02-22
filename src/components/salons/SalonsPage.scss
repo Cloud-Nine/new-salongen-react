@@ -54,6 +54,10 @@
         &:active {
             background: lighten($gold, 50%);
         }
+
+        @include landscape{
+            height: auto;
+        }
         .left {
             width: 18.41620626vw; //  background-color: hsla(108, 84%, 50%, 0.2);
             h4 {
@@ -68,6 +72,11 @@
             h3 {
                 //  color: $grey-medium-text;?????????????????????????????? ??
                 margin-bottom: 3.149606299%;
+                margin-top: 6.149606299%;
+
+                @include md{
+                    margin-top: 3%;
+                }
             }
         }
         .right {
@@ -101,6 +110,9 @@
             p {
                 color: $grey-light-text;
                 display: inline;
+            }
+            h4 {
+                color: $grey-light-text;
             }
             .stars {
                 width: 15vw;

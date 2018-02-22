@@ -50,8 +50,7 @@ class SalonPage extends React.Component {
                 <img src='/img/location.png' alt='location' /> <span>{this.state.salon.address} , {this.state.salon.postalCode} {this.state.salon.city}</span>
               </li>
               <li>
-                <img src='/img/clock.png' alt='clock' />Öppet till
-                {this.state.salon.closes} idag <img className='tilde-down' src='/img/tilde-down.png' alt='tilde-down' />
+                <img src='/img/clock.png' alt='clock' />Öppet till {this.state.salon.closes} idag <img className='tilde-down' src='/img/tilde-down.png' alt='tilde-down' />
               </li>
               <li>
                 <img src='/img/telephone.png' alt='clock' />
@@ -71,7 +70,6 @@ class SalonPage extends React.Component {
             </div>
           </div>
         </section>
-        }
       </main>);
   }
 }

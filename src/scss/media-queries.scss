@@ -59,3 +59,8 @@ $xxl: 1400px;
         @content;
     }
 }
+@mixin landscape {
+    @media only screen and (orientation:landscape) {
+        @content;
+    }
+}
