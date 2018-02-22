@@ -13,8 +13,7 @@ class SalonPage extends React.Component {
     };
   }
   componentDidMount () {
-    axios.get(`http://localhost:3456/salons?id=${this.state.id}`)
-      // .get(`http://esfb.nu/salonapi/salons?name=${this.state.name}`)
+    axios.get(`http://esfb.nu/salonapi/salons?id=${this.state.id}`)
       .then(res => {
         this.setState({
           salon: res.data[0]
@@ -72,6 +71,7 @@ class SalonPage extends React.Component {
             </div>
           </div>
         </section>
+        }
       </main>);
   }
 }

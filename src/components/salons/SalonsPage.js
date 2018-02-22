@@ -30,8 +30,7 @@ class SalonsPage extends React.Component {
 
   componentDidMount() {
     axios
-      // .get(`http://esfb.nu/salonapi/salons`)
-      .get(`http://localhost:3456/salons`)
+       .get(`http://esfb.nu/salonapi/salons`)
       .then(res => {
         const salons = res.data.salons;
         const filteredSalons = res.data.salons;
@@ -42,7 +41,6 @@ class SalonsPage extends React.Component {
 
   render() {
     return (
-
       <div className="salons-page">
         <header>
           <div className='block'>
