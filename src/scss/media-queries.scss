@@ -2,12 +2,10 @@
 $xss: 330px;
 $xs: 480px;
 $sm: 644px;
-$md: 844px;
+$md: 768px;
 $lg: 960px;
 $xl: 1200px;
 $xxl: 1400px;
-$xxxl: 1500px;
-$xxxxl: 2200px;
 @mixin xxs {
     @media only screen and (min-width: $xss) {
         @content;

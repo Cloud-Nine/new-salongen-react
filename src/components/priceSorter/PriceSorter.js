@@ -47,7 +47,7 @@ class PriceSorter extends React.Component {
           {this.state.currentPrice}
         </p>
         <img className={this.state.upOrDown} src='./img/tilde-down-gold.png' alt='' />
-        <div className={` ${this.state.showHideSorter}`}>
+        <div className={this.state.showHideSorter}>
           <ul>
             <li onClick={this.selectPriceRange.bind(this)} data-all='100'>
               Alla priser

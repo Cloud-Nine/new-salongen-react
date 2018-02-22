@@ -1,9 +1,10 @@
 @import './../../scss/exports.scss';
-.salonPage {
+.salon-page {
     background-color: $middle-background;
     header {
         position: relative;
-        height: 38vh;
+        max-height: 38vh;
+        min-height: 38vh;
         -webkit-font-smoothing: antialiased;
         .background {
             width: 100%;
@@ -27,6 +28,10 @@
             width: 100%;
             bottom: 0;
             padding: 0 0 19% 2%;
+            @include md {
+                padding-bottom: 0;
+                height: 20%;
+            }
             h2 {
                 margin-bottom: 1.732283465%;
             }
@@ -41,6 +46,9 @@
                 width: 22%;
                 display: inline-flex;
                 justify-content: space-between;
+                @include md {
+                    width: 13%;
+                }
             }
         }
         .heart {
@@ -63,19 +71,20 @@
         }
     }
     section {
+        margin-top: 3.298350825vh;
         @include md {
             width: 70%;
             margin: 0 auto;
             background-color: $middle-background;
         }
         .inner-wrapper {
-            padding-right: 4.266666667%;
-            padding-left: 4.266666667%;
-            background-color: $middle-background;
+            background-color: $bright-background;
         }
-        margin-top: 3.298350825vh;
         ul {
+            margin-right: 4.266666667%;
+            margin-left: 4.266666667%;
             color: $dark-heading-text;
+            background-color: $middle-background;
             font-weight: 200;
             font-size: 0.9375rem;
             li {
@@ -89,14 +98,19 @@
             }
             img {
                 padding-right: 3.733333333%;
+                max-width: 100%;
+                ;
             }
         }
         .description {
-            background-color: $middle-background;
+            margin-right: 4.266666667%;
+            margin-left: 4.266666667%;
+            background-color: $bright-background;
             p {
                 line-height: 175%;
                 font-weight: 200;
                 font-size: 0.9375rem;
+                margin-top: 0;
             }
         }
     }

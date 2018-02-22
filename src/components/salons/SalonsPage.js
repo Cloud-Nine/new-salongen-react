@@ -43,7 +43,7 @@ class SalonsPage extends React.Component {
   render() {
     return (
 
-      <div className="salonsPage">
+      <div className="salons-page">
         <header>
           <div className='block'>
             <img src='img/tilde-left-gold.png' alt='tilde-left-gold'/>

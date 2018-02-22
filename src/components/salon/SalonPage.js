@@ -3,32 +3,29 @@ import './SalonPage.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import StarRating from './../starRating/StarRating';
-
 class SalonPage extends React.Component {
-
   constructor (props) {
     super(props);
     this.state = {
       name: props.match.params.name,
       id: props.match.params.id,
-      salon: {
-      }
+      salon: {}
     };
   }
-
   componentDidMount () {
-    axios
-      .get(`http://localhost:3456/salons?id=${this.state.id}`)
+    axios.get(`http://localhost:3456/salons?id=${this.state.id}`)
       // .get(`http://esfb.nu/salonapi/salons?name=${this.state.name}`)
       .then(res => {
-        this.setState({salon: res.data[0]});
-      });
+        this.setState({
+          salon: res.data[0]
+        }
+        );
+      }
+    );
   }
-
   render () {
     return (
-
-      <main className='salonPage'>
+      <main className='salon-page'>
         <header>
           <img className='background' src={this.state.salon.thumbnail} alt={this.state.salon.thumbnail} />
           <Link to={`/salonger`}>
@@ -36,10 +33,8 @@ class SalonPage extends React.Component {
           </Link>
           <div>
             <h2 className='serif'>{this.state.salon.name}</h2>
-            {this.state.salon.rating &&
-             <span><StarRating rating={this.state.salon.rating}/> <p> ({this.state.salon.nrOfRatings}) </p></span>}
-          </div>
-          <img className='heart' src='/img/heart.png' alt='heart' />
+            {this.state.salon.rating && <span><StarRating rating= {this.state.salon.rating} /> <p> ( {this.state.salon.nrOfRatings} ) </p></span>}
+          </div> <img className='heart' src='/img/heart.png' alt='heart' />
         </header>
         <nav>
           <div className='active'>
@@ -53,13 +48,11 @@ class SalonPage extends React.Component {
           <div className='inner-wrapper'>
             <ul>
               <li>
-                <img src='/img/location.png' alt='location' />
-                <span>{this.state.salon.address}, {this.state.salon.postalCode} {this.state.salon.city}</span>
+                <img src='/img/location.png' alt='location' /> <span>{this.state.salon.address} , {this.state.salon.postalCode} {this.state.salon.city}</span>
               </li>
               <li>
                 <img src='/img/clock.png' alt='clock' />Öppet till
-                {this.state.salon.closes} idag
-                <img className='tilde-down' src='/img/tilde-down.png' alt='tilde-down' />
+                {this.state.salon.closes} idag <img className='tilde-down' src='/img/tilde-down.png' alt='tilde-down' />
               </li>
               <li>
                 <img src='/img/telephone.png' alt='clock' />
@@ -79,9 +72,7 @@ class SalonPage extends React.Component {
             </div>
           </div>
         </section>
-      </main>
-
-    );
+      </main>);
   }
 }
 

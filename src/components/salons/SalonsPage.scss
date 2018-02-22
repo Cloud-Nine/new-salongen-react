@@ -1,5 +1,5 @@
 @import './../../scss/exports.scss';
-.salonsPage {
+.salons-page {
     ul,
     {
         padding: 0;
@@ -14,9 +14,12 @@
         color: initial;
     }
     .salons {
-        @include sm {
-            width: 70%;
+        @include md {
+            width: 80%;
             margin: 0 auto;
+        }
+        @include lg {
+            width: 55%;
         }
     }
     header {
@@ -39,8 +42,8 @@
         }
     }
     article {
-        display: table; // height: 105px;
-        height: 16.22047244vh;
+        display: flex;
+        height: 16.44518272vh;
         width: 100%;
         border-bottom: 1px solid $bright-border;
         padding: 0 1.125rem 0 1.125rem;
@@ -51,35 +54,36 @@
         &:active {
             background: lighten($gold, 50%);
         }
-        div {
-            display: table-cell;
-        }
         .left {
-            width: 18%; // background-color: hsla(108, 84%, 50%, 0.2);
+            width: 18.41620626vw; //  background-color: hsla(108, 84%, 50%, 0.2);
             h4 {
                 color: $grey-medium-text;
                 font-size: 0.94rem;
             }
         }
         .center {
-            //  background-color: hsla(317, 84%, 50%, 0.2);
-            width: 57.5%; // height: 92px;
+            //   background-color: hsla(317, 84%, 50%, 0.2);
+            width: 57.5%;
+            width: 56.72191529vw;
             h3 {
                 //  color: $grey-medium-text;?????????????????????????????? ??
                 margin-bottom: 3.149606299%;
             }
         }
         .right {
-            // background-color: hsla(200, 84%, 50%, 0.2);
-            width: 20%; //height: 92px;
+            //    background-color: hsla(200, 84%, 50%, 0.2);
+            width: 20vw;
             div {
                 &:nth-child(1) {
                     width: 100%; //  padding-right: 0.75rem;
                 }
                 h5 {
                     margin-top: 0;
-                    margin-left: 6px;
+                    margin-left: 2vw;
                     color: $grey-medium-text;
+                    @include lg {
+                        margin-left: 1vw;
+                    }
                 }
                 p {
                     margin-bottom: 0.5rem;
@@ -89,11 +93,28 @@
         }
         .rating {
             display: flex;
-            align-items: center;
-            max-width: 45%;
+            align-items: center; // max-width: 45%;
             p {
                 color: $grey-light-text;
                 display: inline;
+            }
+            .stars {
+                width: 15vw;
+                @include lg {
+                    width: 6vw;
+                }
+                img {
+                    max-width: 2.5vw;
+                }
+            }
+            span {
+                &:nth-child(2) {
+                    display: inline-flex;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    margin-left: 2.944640754%;
+                }
             }
         }
         .forward-button {
