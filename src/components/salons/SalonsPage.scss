@@ -7,11 +7,10 @@
         list-style: none;
     }
     p {
-        font-weight: 200;
+        font-weight: 300;
     }
     a {
-        text-decoration: none;
-        color: initial;
+        text-decoration: none; // color: initial;
     }
     .salons {
         @include md {
@@ -44,6 +43,7 @@
     article {
         display: flex;
         height: 16.44518272vh;
+        height: 18vh;
         width: 100%;
         border-bottom: 1px solid $bright-border;
         padding: 0 1.125rem 0 1.125rem;
@@ -91,6 +91,10 @@
                 }
             }
         }
+        .forward-button {
+            display: flex;
+            align-items: center;
+        }
         .rating {
             display: flex;
             align-items: center; // max-width: 45%;
@@ -115,14 +119,6 @@
                     align-items: baseline;
                     margin-left: 2.944640754%;
                 }
-            }
-        }
-        .forward-button {
-            position: relative;
-            height: 100%;
-            img {
-                @include cy;
-                right: 0;
             }
         }
     }
