@@ -3,6 +3,7 @@ import './SalonPage.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import StarRating from './../starRating/StarRating';
+import Image from './../shared/image/Image';
 class SalonPage extends React.Component {
   constructor (props) {
     super(props);
@@ -26,7 +27,7 @@ class SalonPage extends React.Component {
     return (
       <main className='salon-page'>
         <header>
-          <img className='background' src={this.state.salon.thumbnail} alt={this.state.salon.thumbnail} />
+    {this.state.salon.rating && <Image cssClass="background" url={this.state.salon.thumbnail}/> }
           <Link to={`/salonger`}>
           <img src='/img/tilde-left.png' alt='tilde-left' />
           </Link>
