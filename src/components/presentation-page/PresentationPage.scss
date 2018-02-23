@@ -1,0 +1,41 @@
+
+@import './../../../src/scss/exports.scss';
+
+
+.presentation-page{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 2%;
+
+    h4{
+        font-weight: 700;
+        color:$gold;
+
+    }
+
+    a{
+        text-decoration: underline;
+        font-weight: 700;
+        color:$dark-heading-text;
+    }
+}
+
+.wrapper{
+    margin: 0 auto;
+
+    @include md{
+        max-width: 60%;
+    }
+    @include lg{
+        max-width: 40%;
+    }
+
+    p,li{
+        line-height: 175%;
+    }
+    
+}
+
+
+section h4{
+    margin-top: 5%;
+}

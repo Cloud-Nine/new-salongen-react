@@ -1,16 +1,21 @@
 @import './../../scss/exports.scss';
 .salon-page {
     background-color: $middle-background;
+
+    @include md{
+        background-color: $bright-background;
+    }
     header {
         position: relative;
-        max-height: 38vh;
-        min-height: 38vh;
+        // max-height: 38vh;
+         min-height: 38vh;
         -webkit-font-smoothing: antialiased;
         .background {
             width: 100%;
             position: relative;
             overflow-y: hidden;
             max-height: 38vh;
+            min-height: 38vh;
         }
         a {
             position: absolute;
@@ -28,9 +33,18 @@
             width: 100%;
             bottom: 0;
             padding: 0 0 19% 2%;
-            @include md {
-                padding-bottom: 0;
+            @include tablet {
+                padding-bottom: 12%;
                 height: 20%;
+            }
+            @include md {
+                padding-bottom: 10%;
+
+            }
+            @include lg {
+                height: 25%;
+                padding-bottom: 5%;
+
             }
             h2 {
                 margin-bottom: 1.732283465%;

@@ -2,7 +2,7 @@
 $xss: 330px;
 $xs: 480px;
 $sm: 644px;
-$md: 768px;
+$md: 752px;
 $lg: 960px;
 $xl: 1200px;
 $xxl: 1400px;
@@ -56,6 +56,11 @@ $xxl: 1400px;
 
 @mixin md-max {
     @media only screen and (max-width: $md) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and (min-width: 444px) {
         @content;
     }
 }

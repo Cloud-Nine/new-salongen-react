@@ -35,15 +35,13 @@
             &:nth-child(2) {
                 height: 7.559055118vh;
             }
-            h2 {
-                font-weight: 100;
-            }
+           
         }
     }
     article {
         display: flex;
-        height: 16.44518272vh;
-        height: 18vh;
+        //height: 16.44518272vh;
+        //height: 18vh;
         width: 100%;
         border-bottom: 1px solid $bright-border;
         padding: 0 1.125rem 0 1.125rem;
