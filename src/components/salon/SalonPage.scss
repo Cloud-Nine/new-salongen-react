@@ -1,14 +1,12 @@
 @import './../../scss/exports.scss';
 .salon-page {
     background-color: $middle-background;
-
-    @include md{
+    @include md {
         background-color: $bright-background;
     }
     header {
-        position: relative;
-        // max-height: 38vh;
-         min-height: 38vh;
+        position: relative; // max-height: 38vh;
+        min-height: 38vh;
         -webkit-font-smoothing: antialiased;
         .background {
             width: 100%;
@@ -16,6 +14,13 @@
             overflow-y: hidden;
             max-height: 38vh;
             min-height: 38vh;
+        }
+        .gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            max-width: 100%;
         }
         a {
             position: absolute;
@@ -39,12 +44,10 @@
             }
             @include md {
                 padding-bottom: 10%;
-
             }
             @include lg {
                 height: 25%;
                 padding-bottom: 5%;
-
             }
             h2 {
                 margin-bottom: 1.732283465%;
@@ -125,8 +128,7 @@
                 font-weight: 300;
                 font-size: 0.9375rem;
                 margin-top: 0;
-                color:$dark-heading-text;
-
+                color: $dark-heading-text;
             }
         }
     }
