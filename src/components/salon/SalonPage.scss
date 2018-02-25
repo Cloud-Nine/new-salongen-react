@@ -7,8 +7,8 @@
     header {
         position: relative; // max-height: 38vh;
         min-height: 38vh;
-        -webkit-font-smoothing: antialiased;
         max-height: 38vh;
+        -webkit-font-smoothing: antialiased;
         background-size: cover;
         background-blend-mode: overlay;
         .gradient {
@@ -18,13 +18,13 @@
             width: 100%;
             max-width: 100%;
         }
-        a {
+        .back-button {
             position: absolute;
             top: 8%;
             left: 4.26666666%;
         }
         h2 {
-            color: $bright-heading-text;
+            color: $white-text;
             font-weight: 300;
             margin: 0 0 0 0;
         }
@@ -34,6 +34,7 @@
             width: 100%;
             bottom: 0;
             padding: 0 0 19% 2%;
+            background: linear-gradient(to top,#000,rgba(#000, 0));
             @include tablet {
                 padding-bottom: 12%;
                 height: 20%;
@@ -50,9 +51,8 @@
             }
             p {
                 display: inline-block;
-                color: $bright-heading-text;
-                font-size: 0.8125rem;
-                font-weight: 300;
+                color: $white-text;
+                font-size: 0.8125rem; 
                 margin: 0;
             }
             .stars {
@@ -68,6 +68,10 @@
             position: absolute;
             top: 8%;
             right: 4.26666666%;
+        }
+        .icon {
+            //box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+            text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
         }
     }
     nav {
@@ -97,8 +101,7 @@
             margin-right: 4.266666667%;
             margin-left: 4.266666667%;
             color: $dark-heading-text;
-            background-color: $middle-background;
-            font-weight: 300;
+            background-color: $middle-background; // font-weight: 300;
             font-size: 0.9375rem;
             li {
                 margin-bottom: 1px;

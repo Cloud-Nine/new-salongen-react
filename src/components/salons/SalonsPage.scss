@@ -58,17 +58,19 @@
         }
         .left {
             width: 18.41620626vw; //  background-color: hsla(108, 84%, 50%, 0.2);
-            h4 {
-                color: $grey-medium-text;
-                font-size: 0.94rem;
+            p {
+                color: $dark-heading-text;
+                font-size: 0.9375rem;
+                font-weight: normal;
+                
             }
         }
         .center {
-            //   background-color: hsla(317, 84%, 50%, 0.2);
             width: 57.5%;
             width: 56.72191529vw;
             h3 {
-                //  color: $grey-medium-text;?????????????????????????????? ??
+                    font-size: 1.25rem;
+
                 margin-bottom: 3.149606299%;
                 margin-top: 6.149606299%;
 
@@ -78,11 +80,10 @@
             }
         }
         .right {
-            //    background-color: hsla(200, 84%, 50%, 0.2);
             width: 20vw;
             div {
                 &:nth-child(1) {
-                    width: 100%; //  padding-right: 0.75rem;
+                    width: 100%; 
                 }
                 h5 {
                     margin-top: 0;
@@ -104,10 +105,11 @@
         }
         .rating {
             display: flex;
-            align-items: center; // max-width: 45%;
+            align-items: center; 
             p {
                 color: $grey-light-text;
                 display: inline;
+                letter-spacing: -0.004375rem;
             }
             h4 {
                 color: $grey-light-text;

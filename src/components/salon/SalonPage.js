@@ -26,17 +26,15 @@ class SalonPage extends React.Component {
   render () {
     return (
       <main className='salon-page'>
-        <header>
-          {this.state.salon.rating && <Image cssClass='background' url={this.state.salon.thumbnail} />}
+        <header  style={{backgroundImage: `url('${this.state.salon.thumbnail}')`}}>
           <Link to={`/salonger`}>
-          <img src='/img/tilde-left.png' alt='tilde-left' />
+          <img className="back-button icon" src='/img/tilde-left.png' alt='tilde-left' />
           </Link>
-          <Image cssClass='gradient' url='/img/gradient.png' />
           <div>
             <h2 className='serif'>{this.state.salon.name}</h2>
-            {this.state.salon.rating && <span><StarRating rating= {this.state.salon.rating} /> <p> ( {this.state.salon.nrOfRatings} ) </p></span>}
+            {this.state.salon.rating && <span><StarRating rating= {this.state.salon.rating} /> <p> ({this.state.salon.nrOfRatings}) </p></span>}
           </div>
-          <img className='heart' src='/img/heart.png' alt='heart' />
+          <img className='heart icon' src='/img/heart.png' alt='heart' />
         </header>
         <nav>
           <div className='active'>
@@ -53,8 +51,7 @@ class SalonPage extends React.Component {
                 <img src='/img/location.png' alt='location' /> <span>{this.state.salon.address} , {this.state.salon.postalCode} {this.state.salon.city}</span>
               </li>
               <li>
-                <img src='/img/clock.png' alt='clock' />Öppet till
-                {this.state.salon.closes} idag <img className='tilde-down' src='/img/tilde-down.png' alt='tilde-down' />
+                <img src='/img/clock.png' alt='clock' />Öppet till {this.state.salon.closes} idag <img className='tilde-down' src='/img/tilde-down.png' alt='tilde-down' />
               </li>
               <li>
                 <img src='/img/telephone.png' alt='clock' />
