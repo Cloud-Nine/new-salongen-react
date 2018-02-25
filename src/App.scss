@@ -24,10 +24,14 @@ body {
     margin: 0;
      font-family: 'Helvetic Neue Light', sans-serif;
     min-height: 100vh; // font-family: Arial, Helvetica, sans-serif;
+   	-webkit-font-smoothing: antialiased !important;
+
 }
 
 .serif {
     font-family: 'Font Bureau';
+    font-weight: 300;
+    font-size: 1.25rem;
 }
 
 .small-text {

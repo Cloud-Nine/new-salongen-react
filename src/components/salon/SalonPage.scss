@@ -8,13 +8,9 @@
         position: relative; // max-height: 38vh;
         min-height: 38vh;
         -webkit-font-smoothing: antialiased;
-        .background {
-            width: 100%;
-            position: relative;
-            overflow-y: hidden;
-            max-height: 38vh;
-            min-height: 38vh;
-        }
+        max-height: 38vh;
+        background-size: cover;
+        background-blend-mode: overlay;
         .gradient {
             position: absolute;
             bottom: 0;

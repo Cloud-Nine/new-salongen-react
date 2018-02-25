@@ -21,7 +21,7 @@ class Image extends React.Component {
 
   render () {
     return (
-        <img className={this.props.cssClass} src={this.props.url} alt={this.state.altText}/>
+        <img className={this.props.cssClass} style={{ backgroundImage: `url('${this.props.url}')` }} alt={this.state.altText}/>
     );
   }
 }
