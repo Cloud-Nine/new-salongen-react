@@ -90,7 +90,6 @@ class SalonsPage extends React.Component {
           </ul>
         </section>
       </div>
-
     );
   }
 }

@@ -1,17 +1,5 @@
 @import './../../scss/exports.scss';
 .salons-page {
-    ul,
-    {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-    p {
-        font-weight: normal;
-    }
-    a {
-        text-decoration: none; // color: initial;
-    }
     .salons {
         @include md {
             width: 80%;
@@ -22,7 +10,6 @@
         }
     }
     header {
-        // height: 15.11811024vh;
         .block {
             display: flex;
             justify-content: space-between;
@@ -35,46 +22,44 @@
             &:nth-child(2) {
                 height: 7.559055118vh;
             }
-           
+
+            h2{
+                font-size: 1.375rem;
+            }
         }
     }
     article {
         display: flex;
-        //height: 16.44518272vh;
-        //height: 18vh;
         width: 100%;
         border-bottom: 1px solid $bright-border;
         padding: 0 1.125rem 0 1.125rem;
-        cursor: pointer;
         &:hover {
             background: lighten($gold, 50%);
         }
         &:active {
             background: lighten($gold, 50%);
         }
-
-        @include landscape{
+        @include landscape {
             height: auto;
         }
         .left {
-            width: 18.41620626vw; //  background-color: hsla(108, 84%, 50%, 0.2);
+            width: 18.41620626vw;
             p {
                 color: $dark-heading-text;
                 font-size: 0.9375rem;
                 font-weight: normal;
-                
             }
         }
         .center {
             width: 57.5%;
             width: 56.72191529vw;
             h3 {
-                    font-size: 1.25rem;
-
+//                 -webkit-transform: translate3d(0,0,0) !important;
+// transform: translate3d(0,0,0) !important;
+                font-size: 1.25rem;
                 margin-bottom: 3.149606299%;
                 margin-top: 6.149606299%;
-
-                @include md{
+                @include md {
                     margin-top: 3%;
                 }
             }
@@ -83,7 +68,7 @@
             width: 20vw;
             div {
                 &:nth-child(1) {
-                    width: 100%; 
+                    width: 100%;
                 }
                 h5 {
                     margin-top: 0;
@@ -105,7 +90,7 @@
         }
         .rating {
             display: flex;
-            align-items: center; 
+            align-items: center;
             p {
                 color: $grey-light-text;
                 display: inline;

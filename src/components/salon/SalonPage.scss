@@ -1,134 +1,151 @@
-@import './../../scss/exports.scss';
-.salon-page {
-    background-color: $middle-background;
-    @include md {
-        background-color: $bright-background;
-    }
-    header {
-        position: relative; // max-height: 38vh;
-        min-height: 38vh;
-        max-height: 38vh;
-        -webkit-font-smoothing: antialiased;
-        background-size: cover;
-        background-blend-mode: overlay;
-        .gradient {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            max-width: 100%;
+    @import './../../scss/exports.scss';
+    .salon-page {
+        background-color: $middle-background;
+        @include md {
+            background-color: $bright-background;
         }
-        .back-button {
-            position: absolute;
-            top: 8%;
-            left: 4.26666666%;
-        }
-        h2 {
-            color: $white-text;
-            font-weight: 300;
-            margin: 0 0 0 0;
-        }
-        div {
-            position: absolute;
-            height: 27.87610619%;
-            width: 100%;
-            bottom: 0;
-            padding: 0 0 19% 2%;
-            background: linear-gradient(to top,#000,rgba(#000, 0));
-            @include tablet {
-                padding-bottom: 12%;
-                height: 20%;
-            }
+        header {
+            position: relative; // max-height: 38vh;
+            min-height: 38vh;
+            max-height: 38vh;
+            -webkit-font-smoothing: antialiased;
+            background-size: cover;
+            background-position: center;
             @include md {
-                padding-bottom: 10%;
+                min-height: 50vh;
+                max-height: 50vh;
             }
             @include lg {
-                height: 25%;
-                padding-bottom: 5%;
+                min-height: 60vh;
+                max-height: 60vh;
+            }
+            .gradient {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+            .back-button {
+                position: absolute;
+                top: 8%;
+                left: 4.26666666%;
+                filter: contrast(200%);
             }
             h2 {
-                margin-bottom: 1.732283465%;
-            }
-            p {
-                display: inline-block;
                 color: $white-text;
-                font-size: 0.8125rem; 
-                margin: 0;
+                font-weight: 300;
+                margin: 0 0 0 0;
             }
-            .stars {
-                width: 22%;
-                display: inline-flex;
-                justify-content: space-between;
+            div {
+                position: absolute;
+                height: 27.87610619%;
+                width: 100%;
+                bottom: 0;
+                padding: 0 0 19% 2%;
+                background: linear-gradient(to top, #000, rgba(#000, 0));
+                @include tablet {
+                    padding-bottom: 12%;
+                    height: 20%;
+                }
                 @include md {
-                    width: 13%;
+                    padding-bottom: 10%;
+                }
+                @include lg {
+                    height: 25%;
+                    padding-bottom: 5%;
+                }
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 27.9vw;
+                    img {
+                        margin-left: 3px;
+                    }
+                }
+                h2 {
+                    margin-bottom: 1.732283465%;
+                }
+                p {
+                    display: inline-block;
+                    color: $white-text;
+                    font-size: 0.8125rem;
+                    margin: 0;
+                }
+                .stars {
+                    width: 22%;
+                    display: inline-flex;
+                    justify-content: space-between;
+                    filter: contrast(110%);
+                    @include md {
+                        width: 13%;
+                    }
                 }
             }
+            .heart {
+                position: absolute;
+                top: 8%;
+                right: 4.26666666%;
+                filter: contrast(200%);
+            }
         }
-        .heart {
-            position: absolute;
-            top: 8%;
-            right: 4.26666666%;
-        }
-        .icon {
-            //box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
-            text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
-        }
-    }
-    nav {
-        display: flex;
-        justify-content: center;
-        align-content: space-around;
-        background-color: $bright-background;
-        height: 7.61589404vh;
-        div {
-            width: 50%;
-            align-items: center;
+        nav {
             display: flex;
             justify-content: center;
-        }
-    }
-    section {
-        margin-top: 3.298350825vh;
-        @include md {
-            width: 70%;
-            margin: 0 auto;
-            background-color: $middle-background;
-        }
-        .inner-wrapper {
+            align-content: space-around;
             background-color: $bright-background;
+            height: 7.61589404vh;
+            div {
+                width: 50%;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
         }
-        ul {
-            margin-right: 4.266666667%;
-            margin-left: 4.266666667%;
-            color: $dark-heading-text;
-            background-color: $middle-background; // font-weight: 300;
-            font-size: 0.9375rem;
-            li {
-                margin-bottom: 1px;
-                padding-top: 1.79910045vh;
-                padding-bottom: 1.79910045vh;
+        section {
+            margin-top: 3.298350825vh;
+            @include md {
+                width: 70%;
+                margin: 0 auto;
+                background-color: $middle-background;
+            }
+            .inner-wrapper {
                 background-color: $bright-background;
-                .tilde-down {
-                    margin-left: 2.814814815%;
+            }
+            ul {
+                margin-right: 4.266666667%;
+                margin-left: 4.266666667%;
+                color: $dark-heading-text;
+                background-color: $middle-background;
+                font-size: 0.9375rem;
+                li {
+                    margin-bottom: 1px;
+                    padding-top: 1.79910045vh;
+                    padding-bottom: 1.79910045vh;
+                    background-color: $bright-background;
+                    .tilde-down {
+                        margin-left: 2.814814815%;
+                    }
+                }
+                img {
+                    padding-right: 3.733333333%;
+                    max-width: 100%;
+                    ;
                 }
             }
-            img {
-                padding-right: 3.733333333%;
-                max-width: 100%;
-                ;
-            }
-        }
-        .description {
-            margin-right: 4.266666667%;
-            margin-left: 4.266666667%;
-            background-color: $bright-background;
-            p {
-                line-height: 175%;
-                font-weight: 300;
-                font-size: 0.9375rem;
-                margin-top: 0;
-                color: $dark-heading-text;
+            .description {
+                margin-right: 4.266666667%;
+                margin-left: 4.266666667%;
+                padding-bottom: 5%;
+                background-color: $bright-background;
+                p {
+                    line-height: 175%;
+                    font-weight: 300;
+                    font-size: 0.9375rem;
+                    margin-top: 0;
+                    color: $dark-heading-text;
+                }
             }
         }
     }
-}

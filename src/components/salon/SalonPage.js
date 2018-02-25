@@ -3,8 +3,9 @@ import './SalonPage.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import StarRating from './../starRating/StarRating';
-import Image from './../shared/image/Image';
+
 class SalonPage extends React.Component {
+  
   constructor (props) {
     super(props);
     this.state = {
@@ -28,13 +29,13 @@ class SalonPage extends React.Component {
       <main className='salon-page'>
         <header  style={{backgroundImage: `url('${this.state.salon.thumbnail}')`}}>
           <Link to={`/salonger`}>
-          <img className="back-button icon" src='/img/tilde-left.png' alt='tilde-left' />
+          <img className="back-button" src='/img/tilde-left.png' alt='tilde-left' />
           </Link>
           <div>
             <h2 className='serif'>{this.state.salon.name}</h2>
             {this.state.salon.rating && <span><StarRating rating= {this.state.salon.rating} /> <p> ({this.state.salon.nrOfRatings}) </p></span>}
           </div>
-          <img className='heart icon' src='/img/heart.png' alt='heart' />
+          <img className='heart' src='/img/heart.png' alt='heart' />
         </header>
         <nav>
           <div className='active'>
