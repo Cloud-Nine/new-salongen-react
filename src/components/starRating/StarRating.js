@@ -1,28 +1,24 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import './StarRating.css';
+import emptyStar from './star.png';
+import filledStar from './star-filled.png';
 
-class StarRating extends React.Component {
+class StarRating extends PureComponent {
+    constructor(props){
+        super(props);
 
-  constructor (props) {
-    super(props);
-    this.unFilled = '/img/star.png';
-    this.state = {
-      rating: props.rating,
-      stars: [{url: this.unFilled}, {url: this.unFilled}, {url: this.unFilled}, {url: this.unFilled}, {url: this.unFilled}]
-    };
-    for (let i = 0; i < this.state.rating; i++) {
-      this.state.stars[i].url = '/img/star-filled.png';
     }
-  }
-
-  componentDidMount () {
-  }
-
-  render () {
-    return (
-      <span className='stars'><img src={this.state.stars[0].url} alt='star'/> <img src={this.state.stars[1].url} alt='star'/> <img src={this.state.stars[2].url} alt='star'/> <img src={this.state.stars[3].url} alt='star'/> <img src={this.state.stars[4].url} alt='star'/></span>
-    );
-  }
+    render() {
+        const {rating} = this.props;
+        return (
+            <span className={'stars'}>
+                {new Array(5).fill()
+                    .map((_, index) => (
+                        <img key={index} src={index < rating ? filledStar : emptyStar} alt='star'/>
+                    ))}
+            </span>
+        )
+    }
 }
 
 export default StarRating;
