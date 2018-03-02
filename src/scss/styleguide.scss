@@ -1,11 +1,22 @@
-$gold:#b69f58;
-$bright-heading-text:#D8D8D8;
-$dark-heading-text:#202020;
-$bright-background:#FFF;
-$middle-background:#F9F9F9;
-$bright-border:#EEEEEE;
-$grey-light-text:#656565;
-$grey-medium-text:#666666;
-$temporary-grey:lighten(grey, 50%);
-$base-font-size:100%;
-$white-text:#fff;
+
+//
+// Brand specific variables
+//
+
+// Brand: Colors
+$brand-color-gold: #b69f58;
+
+//
+//  Theme specific variables
+//
+
+// Theme: Colors
+$theme-color-lightgrey: #eee;
+$theme-color-grey: #666;
+$theme-color-darkgrey: #D8D8D8;
+$theme-color-black: #202020;
+$theme-color-eggwhite: #f9f9f9;
+$theme-color-white: #fff;
+
+// Theme: Fonts
+$theme-base-font-size: 100%;
