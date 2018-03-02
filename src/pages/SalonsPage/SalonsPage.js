@@ -1,21 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
-import './salonsPage.css';
+import { Link } from 'react-router-dom';
+
+// Components
 import PriceFilter from '../../components/PriceFilter/PriceFilter';
 import StarRating from '../../components/StarRating/StarRating';
-import {Link} from 'react-router-dom';
 
-class SalonsPage extends React.Component {
+// Styling
+import './salonsPage.css';
+
+class SalonsPage extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
             salons: [],
-            filteredSalons: []
+            filteredSalons: [],
         };
-
-        this.handleFilterChange = this.handleFilterChange.bind(this);
+        this.handleFilterChange  = this.handleFilterChange.bind(this);
     }
 
     handleFilterChange(filter) {
@@ -53,7 +57,7 @@ class SalonsPage extends React.Component {
                 <section className='salons'>
                     <ul>
                         {this.state.filteredSalons
-                            .map(salon => <li key={salon.id}>
+                            .map(salon => <li  key={salon.id}>
                                 <Link to={`/salong/${salon.name}/${salon.id}`}>
                                     <article>
                                         <div className='left'>
@@ -65,8 +69,7 @@ class SalonsPage extends React.Component {
                                             <h3 className="serif">{salon.name}</h3>
                                             <div className="rating">
                                                 <StarRating rating={salon.rating}/>
-                                                <span><p
-                                                    className='grey-text small-text'>({salon.nrOfRatings})</p></span>
+                                                <span><p className='grey-text small-text'>({salon.nrOfRatings})</p></span>
                                             </div>
                                             <h4>
                                                 {salon.address}
@@ -91,6 +94,19 @@ class SalonsPage extends React.Component {
             </div>
         );
     }
+}
+
+
+SalonsPage.defaultProps = {
+    history: {},
+    location: {},
+    match: {},
+}
+
+SalonsPage.propTypes = {
+    history: PropTypes.object,
+    location: PropTypes.object,
+    match: PropTypes.object
 }
 
 export default SalonsPage;
