@@ -1,11 +1,16 @@
-import React from 'react';
-import './salonPage.css';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+
+// Components
 import StarRating from '../../components/StarRating/StarRating';
 
-class SalonPage extends React.Component {
-  
+// Styling
+import './salonPage.css';
+
+class SalonPage extends Component {
+
   constructor (props) {
     super(props);
     this.state = {
@@ -74,6 +79,18 @@ class SalonPage extends React.Component {
         </section>
       </main>);
   }
+}
+
+SalonPage.defaultProps = {
+  history: {},
+  location: {},
+  match: {},
+}
+
+SalonPage.propTypes = {
+  history: PropTypes.object,
+  location: PropTypes.object,
+  match: PropTypes.object
 }
 
 export default SalonPage;

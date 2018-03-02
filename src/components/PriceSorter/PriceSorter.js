@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+// Styling
 import './priceSorter.css';
 
-class PriceSorter extends React.Component {
+class PriceSorter extends Component {
 
   constructor (props) {
     super(props);
@@ -69,6 +72,14 @@ class PriceSorter extends React.Component {
       </div>
     );
   }
+}
+
+PriceSorter.defaultProps = {
+  getPriceFromChild: () => {}
+}
+
+PriceSorter.propTypes = {
+  getPriceFromChild: PropTypes.func
 }
 
 export default PriceSorter;

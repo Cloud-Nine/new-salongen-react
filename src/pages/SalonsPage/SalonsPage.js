@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
-import './salonsPage.css';
+import { Link } from 'react-router-dom';
+
+// Components
 import PriceSorter from '../../components/PriceSorter/PriceSorter';
 import StarRating from '../../components/StarRating/StarRating';
-import {Link} from 'react-router-dom';
 
-class SalonsPage extends React.Component {
+// Styling
+import './salonsPage.css';
+
+class SalonsPage extends Component {
 
   constructor(props) {
     super(props);
@@ -66,8 +71,8 @@ class SalonsPage extends React.Component {
                     <div className='center'>
                       <h3 className="serif">{salon.name}</h3>
                       <div className="rating">
-                      <StarRating rating={salon.rating}/>
-                      <span><p className='grey-text small-text'>({salon.nrOfRatings})</p></span>
+                        <StarRating rating={salon.rating}/>
+                        <span><p className='grey-text small-text'>({salon.nrOfRatings})</p></span>
                       </div>
                       <h4>
                         {salon.address}
@@ -92,6 +97,19 @@ class SalonsPage extends React.Component {
       </div>
     );
   }
+}
+
+
+SalonsPage.defaultProps = {
+  history: {},
+  location: {},
+  match: {},
+}
+
+SalonsPage.propTypes = {
+  history: PropTypes.object,
+  location: PropTypes.object,
+  match: PropTypes.object
 }
 
 export default SalonsPage;
