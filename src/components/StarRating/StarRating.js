@@ -1,13 +1,9 @@
 import React, {PureComponent} from 'react';
-import './StarRating.css';
+import './starRating.css';
 import emptyStar from './star.png';
 import filledStar from './star-filled.png';
 
 class StarRating extends PureComponent {
-    constructor(props){
-        super(props);
-
-    }
     render() {
         const {rating} = this.props;
         return (

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import SalonsPage from './../salons/SalonsPage';
-import SalonPage from './../salon/SalonPage';
-import PresentationPage from './../presentation-page/PresentationPage';
+import SalonsPage from '../../pages/SalonsPage/SalonsPage';
+import SalonPage from '../../pages/SalonPage/SalonPage';
+import PresentationPage from '../../pages/PresentationPage/PresentationPage';
 
 class RouterOutlet extends Component {
   render () {
