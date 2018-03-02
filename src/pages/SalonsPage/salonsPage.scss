@@ -14,7 +14,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid $gold;
+            border-bottom: 1px solid $brand-color-gold;
             &:nth-child(1) {
                 padding: 0 1.125rem;
                 height: 7.559055118vh;
@@ -34,10 +34,10 @@
         border-bottom: 1px solid $theme-color-lightgrey;
         padding: 0 1.125rem 0 1.125rem;
         &:hover {
-            background: lighten($gold, 50%);
+            background: lighten($brand-color-gold, 50%);
         }
         &:active {
-            background: lighten($gold, 50%);
+            background: lighten($brand-color-gold, 50%);
         }
         @include landscape {
             height: auto;

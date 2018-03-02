@@ -24,9 +24,9 @@ class SalonsPage extends React.Component {
         (salon.price <= values.max && salon.price >= values.min ));
          this.setState({filteredSalons:filtered})
     }
-  
+
   }
-  
+
 
   componentDidMount() {
     axios
@@ -68,7 +68,7 @@ class SalonsPage extends React.Component {
                       <div className="rating">
                       <StarRating rating={salon.rating}/>
                       <span><p className='grey-text small-text'>({salon.nrOfRatings})</p></span>
-                      </div> 
+                      </div>
                       <h4>
                         {salon.address}
                       </h4>

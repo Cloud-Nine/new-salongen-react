@@ -2528,7 +2528,7 @@
 .salons-page article {
   display: flex;
   width: 100%;
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid #eee;
   padding: 0 1.125rem 0 1.125rem; }
   .salons-page article:hover {
     background: white; }
@@ -2560,7 +2560,7 @@
     .salons-page article .right div h5 {
       margin-top: 0;
       margin-left: 2vw;
-      color: #666666; }
+      color: #666; }
       @media only screen and (min-width: 960px) {
         .salons-page article .right div h5 {
           margin-left: 1vw; } }
@@ -2574,11 +2574,11 @@
     display: flex;
     align-items: center; }
     .salons-page article .rating p {
-      color: #656565;
+      color: #666;
       display: inline;
       letter-spacing: -0.004375rem; }
     .salons-page article .rating h4 {
-      color: #656565; }
+      color: #666; }
     .salons-page article .rating .stars {
       width: 15vw; }
       @media only screen and (min-width: 960px) {
