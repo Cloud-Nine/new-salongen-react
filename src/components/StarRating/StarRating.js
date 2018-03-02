@@ -4,10 +4,6 @@ import emptyStar from './star.png';
 import filledStar from './star-filled.png';
 
 class StarRating extends PureComponent {
-    constructor(props){
-        super(props);
-
-    }
     render() {
         const {rating} = this.props;
         return (
