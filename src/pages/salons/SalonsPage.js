@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import './SalonsPage.css';
-import PriceSorter from './../priceSorter/PriceSorter';
-import StarRating from './../starRating/StarRating';
+import PriceSorter from '../../components/priceSorter/PriceSorter';
+import StarRating from '../../components/starRating/StarRating';
 import {Link} from 'react-router-dom';
 
 class SalonsPage extends React.Component {
