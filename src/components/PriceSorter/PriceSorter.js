@@ -15,12 +15,10 @@ class PriceSorter extends React.Component {
   }
 
   toggleDropdown () {
-    var hideOrShow = (this.state.showHideSorter === 'hidden') ? 'show' : 'hidden';
+    var showHideSorter = (this.state.showHideSorter === 'hidden') ? 'show' : 'hidden';
     var upOrDown = (this.state.upOrDown === 'down') ? 'up' : 'down';
     var collapsedOrexpanded = (this.state.collapsedOrexpandedv === 'expanded') ? 'collapsed' : 'expanded';
-    this.setState({'showHideSorter': hideOrShow});
-    this.setState({'upOrDown': upOrDown});
-    this.setState({'collapsedOrexpanded': collapsedOrexpanded});
+    this.setState(() => ({showHideSorter, upOrDown, collapsedOrexpanded}));
   }
 
   selectPriceRange (event) {
