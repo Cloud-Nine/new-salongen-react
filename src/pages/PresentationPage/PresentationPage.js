@@ -1,17 +1,9 @@
-import React from 'react';
+import React, { Component} from 'react';
+
+// Styling
 import './presentationPage.css';
 
-class PresentationPage extends React.Component {
-
-  constructor (props) {
-    super(props);
-
-    this.state = {
-
-    };
-  }
-
-
+class PresentationPage extends Component {
 
   render () {
     return (
@@ -19,7 +11,7 @@ class PresentationPage extends React.Component {
       <div className="wrapper">
         <h1>Arbetsprov</h1>
           <p><strong>Val av ramverk</strong> föll initalt på <i>Angular 5</i> men jag blev med projektets gång allt mer intresserad av att testa <i>React</i> – så det fick bli en sådan version också. </p>
-       
+
           <p><strong>Länkar</strong> till github och demosajter finns här nedan, Angular-versionen ligger ännu inte uppe men siktar på att få upp den live i helgen.</p>
 
           <i>Joel Sjöström</i>
@@ -34,7 +26,7 @@ class PresentationPage extends React.Component {
                       <a href="http://joelsjostrom.me/salonger">Demo</a>
                   </li>
               </ul>
-     
+
               <h4>Angular 5</h4>
               <ul>
                   <li>
@@ -53,7 +45,7 @@ class PresentationPage extends React.Component {
           </section>
       </div>
   </main>
-  
+
     );
   }
 }
