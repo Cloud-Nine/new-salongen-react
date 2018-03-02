@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import './SalonsPage.css';
+import './salonsPage.css';
 import PriceSorter from '../../components/PriceSorter/PriceSorter';
 import StarRating from '../../components/StarRating/StarRating';
 import {Link} from 'react-router-dom';

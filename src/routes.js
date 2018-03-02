@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import App from './App';
-import SalonsPage from './pages/salons/SalonsPage';
-import SalonPage from './pages/salon/SalonPage';
+import SalonsPage from './pages/SalonsPage/SalonsPage';
+import SalonPage from './pages/SalonPage/SalonPage';
 
 export default (
 <Router>
