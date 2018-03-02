@@ -1,5 +1,5 @@
 import React from 'react';
-import './PriceSorter.css';
+import './priceSorter.css';
 
 class PriceSorter extends React.Component {
 

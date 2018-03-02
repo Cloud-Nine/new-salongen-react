@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RouterOutlet from './components/router-oulet/RouterOutlet';
+import RouterOutlet from './components/RouterOulet/RouterOutlet';
 import './App.css';
 
 class App extends Component {

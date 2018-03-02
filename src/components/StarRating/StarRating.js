@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import './StarRating.css';
+import './starRating.css';
 import emptyStar from './star.png';
 import filledStar from './star-filled.png';
 
