@@ -17,8 +17,8 @@
 
 html,
 body {
-    font-size: $base-font-size;
-    background-color: $bright-background;
+    font-size: $theme-base-font-size;
+    background-color: $theme-color-white;
     overflow-x: hidden;
     padding: 0;
     margin: 0;
@@ -39,7 +39,7 @@ body {
 }
 
 .grey-text {
-    color: $grey-light-text;
+    color: $theme-color-grey;
 }
 
 h3,
@@ -56,14 +56,14 @@ h3 {
 
 h4 {
     font-weight: 400;
-    color: $grey-light-text;
+    color: $theme-color-grey;
     display: inline-block;
     margin-bottom: 0.5rem
 }
 
 h5 {
     font-weight: 400;
-    color: $grey-light-text;
+    color: $theme-color-grey;
     display: inline-block;
     margin-bottom: 0.5rem
 }
@@ -80,5 +80,5 @@ ul {
 
 a {
     text-decoration: none;
-    color: $dark-heading-text;
+    color: $theme-color-black;
 }
